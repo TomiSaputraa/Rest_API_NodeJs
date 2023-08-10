@@ -3,7 +3,7 @@ const usersModel = require("../models/usersModel");
 const getAllUsers = async (req, res) => {
   // trycatch digunakan untuk menangkap error di database
   try {
-    // [data] sebenarnya berisi [rows, field] karna kita cuma butuh data maka kita cuma butuh usernya
+    // [data] sebenarnya berisi [rows, field] karna kita cuma butuh data maka kita cuma butuh rows
     const [data] = await usersModel.getAllUsers();
 
     res.json({
